@@ -1,7 +1,9 @@
 package com.example.myapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -13,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
     TextView t1,t2,t3;
     ImageView img1,img2,img3,img4;
-    EditText e1,e2;
+    TextView e1,e2;
     LinearLayout lay1,lay2;
 
     int count=0;
+    boolean b=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,26 @@ public class MainActivity extends AppCompatActivity {
 
         lay1=findViewById(R.id.layout1);
         lay2=findViewById(R.id.layout2);
+
+
+        t1.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+            @Override
+            public void onClick(View view) {
+                if (b == true) {
+                    lay1.setVisibility(View.GONE);
+                    lay2.setVisibility(View.GONE);
+                    b=false;
+                    t1.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.ic_baseline_arrow_drop_down_24,0);
+                }
+                else {
+                    lay1.setVisibility(View.VISIBLE);
+                    lay2.setVisibility(View.VISIBLE);
+                    t1.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.ic_baseline_arrow_drop_up_24,0);
+                    b=true;
+                }
+            }
+        });
 
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
