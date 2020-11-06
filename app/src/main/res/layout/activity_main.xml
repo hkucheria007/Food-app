@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:fillViewport="true"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
     <TextView
@@ -13,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="First"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
         android:textStyle="bold"/>
 
@@ -29,7 +34,7 @@
             android:id="@+id/First1TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="TextView" />
 
         <ImageView
@@ -73,7 +78,7 @@
                 android:id="@+id/First2TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:text="TextView" />
 
             <ImageView
@@ -111,7 +116,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Second"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:layout_marginTop="20dp"
         android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
         android:textStyle="bold"/>
@@ -127,7 +132,7 @@
             android:id="@+id/Second1TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="TextView" />
 
         <ImageView
@@ -171,7 +176,7 @@
             android:id="@+id/Second2TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="TextView" />
 
         <ImageView
@@ -203,9 +208,6 @@
 
     </LinearLayout>
 
-
-
-
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
 
