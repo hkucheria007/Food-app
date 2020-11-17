@@ -25,23 +25,27 @@ public class MainActivity extends AppCompatActivity {
     TextView e3,e4;
     LinearLayout lay3,lay4;
 
+    //Third
+    TextView t7,t8,t9;
+    ImageView img9,img10,img11,img12;
+    TextView e5,e6;
+    LinearLayout lay5,lay6;
 
 
     int count=0;
-    boolean first=true,second=true;
+    boolean first=true,second=true,third=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //First Implementation
 
+        //First Implementation
         t1=findViewById(R.id.FirstTV);
         t2=findViewById(R.id.First1TV);
         t3=findViewById(R.id.First2TV);
 
-        t4=findViewById(R.id.SecondTV);
 
         img1=findViewById(R.id.imageView1);
         img2=findViewById(R.id.imageView2);
@@ -120,8 +124,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Second Implementation
 
+        //Second Implementation
         t4=findViewById(R.id.SecondTV);
         t5=findViewById(R.id.Second1TV);
         t6=findViewById(R.id.Second2TV);
@@ -203,6 +207,93 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+
+        //Third Implementation
+        //Second Implementation
+        t7=findViewById(R.id.ThirdTV);
+        t8=findViewById(R.id.Third1TV);
+        t9=findViewById(R.id.Third2TV);
+
+
+        img9=findViewById(R.id.imageView9);
+        img10=findViewById(R.id.imageView10);
+        img11=findViewById(R.id.imageView11);
+        img12=findViewById(R.id.imageView12);
+
+        e5=findViewById(R.id.editTextThirdQuantity1);
+        e6=findViewById(R.id.editTextThirdQuantity2);
+
+        lay5=findViewById(R.id.layout5);
+        lay6=findViewById(R.id.layout6);
+
+
+        t7.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+            @Override
+            public void onClick(View view) {
+                if (third== true) {
+                    lay5.setVisibility(View.GONE);
+                    lay6.setVisibility(View.GONE);
+                    third=false;
+                    t7.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.ic_baseline_arrow_drop_down_24,0);
+                }
+                else {
+                    lay5.setVisibility(View.VISIBLE);
+                    lay6.setVisibility(View.VISIBLE);
+                    t7.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.ic_baseline_arrow_drop_up_24,0);
+                    third=true;
+                }
+            }
+        });
+
+        img10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count= Integer.parseInt(e5.getText().toString());
+                count=count+1;
+                e5.setText(Integer.toString(count));
+            }
+        });
+
+        img9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count= Integer.parseInt(e5.getText().toString());
+                if(count!=0){
+                    count=count-1;
+                    e5.setText(Integer.toString(count));
+                }
+                else{
+                    e5.setText("0");
+                }
+            }
+        });
+
+        img12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count= Integer.parseInt(e6.getText().toString());
+                count=count+1;
+                e6.setText(Integer.toString(count));
+            }
+        });
+
+        img11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count= Integer.parseInt(e6.getText().toString());
+                if(count!=0){
+                    count=count-1;
+                    e6.setText(Integer.toString(count));
+                }
+                else{
+                    e6.setText("0");
+                }
+            }
+        });
+
 
 
     }
