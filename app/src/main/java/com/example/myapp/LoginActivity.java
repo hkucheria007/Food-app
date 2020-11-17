@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     mobile=te1.getText().toString().trim();
 
-                    if(mobile.isEmpty()||mobile.length()<12){
+                    if(mobile.isEmpty()||mobile.length()<10){
                         te1.setError("Enter valid Mobile No");
                         te1.requestFocus();
                         return;

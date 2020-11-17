@@ -65,7 +65,7 @@ public class VerifyMobile extends AppCompatActivity {
 
     private void sendVerificationCode(String mobile) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                "+" + mobile,
+                "+91" + mobile,
                 60,
                 TimeUnit.SECONDS,
                 TaskExecutors.MAIN_THREAD,
