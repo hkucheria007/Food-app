@@ -17,7 +17,7 @@
         android:id="@+id/FirstTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="First"
+        android:text="Pizza"
         android:textSize="24sp"
         android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
         android:textStyle="bold"/>
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="TextView" />
+            android:text="Pizza1" />
 
         <ImageView
             android:id="@+id/imageView1"
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="TextView" />
+                android:text="Pizza2" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -115,7 +115,7 @@
         android:id="@+id/SecondTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Second"
+        android:text="Donuts"
         android:textSize="24sp"
         android:layout_marginTop="20dp"
         android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
@@ -133,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="TextView" />
+            android:text="Donut1" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -177,7 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="TextView" />
+            android:text="Donut2" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -212,7 +212,7 @@
             android:id="@+id/ThirdTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Third"
+            android:text="Sandwitch"
             android:textSize="24sp"
             android:layout_marginTop="20dp"
             android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
@@ -230,7 +230,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="TextView" />
+                android:text="Sandwitch1" />
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -274,7 +274,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="TextView" />
+                android:text="Sandwitch2" />
 
             <ImageView
                 android:id="@+id/imageView11"
@@ -314,7 +314,13 @@
             android:layout_gravity="right"
             android:layout_marginTop="15dp"/>
 
-
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"/>
 
     </LinearLayout>
 </ScrollView>

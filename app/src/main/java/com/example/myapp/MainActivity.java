@@ -1,15 +1,28 @@
 package com.example.myapp;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
     TextView e5,e6;
     LinearLayout lay5,lay6;
 
+    //Button
+    Button next,logout;
+    FirebaseAuth auth;
+    FirebaseFirestore firestore;
+    String userId;
+    String pizza1,pizza2,donut1,donut2,sandwitch1,sandwitch2;
+    String Quantityp1,Quantityp2,Quantityd1,Quantityd2,Quantitys1,Quantitys2;
 
     int count=0;
     boolean first=true,second=true,third=true;
@@ -40,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Button Implementation
+        next=findViewById(R.id.button);
+        logout=findViewById(R.id.logout);
+        auth=FirebaseAuth.getInstance();
+        firestore=FirebaseFirestore.getInstance();
 
         //First Implementation
         t1=findViewById(R.id.FirstTV);
@@ -294,7 +319,69 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //logout button
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               auth.signOut();
+               if(auth.getCurrentUser()==null){
+                   startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                   finish();
+               }
+            }
+        });
 
+        //next button
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //name
+                pizza1=t2.getText().toString();
+                pizza2=t3.getText().toString();
+                donut1=t5.getText().toString();
+                donut2=t6.getText().toString();
+                sandwitch1=t8.getText().toString();
+                sandwitch2=t9.getText().toString();
+
+                //quantity
+                Quantityp1=e1.getText().toString();
+                Quantityp2=e2.getText().toString();
+                Quantityd1=e3.getText().toString();
+                Quantityd2=e4.getText().toString();
+                Quantitys1=e5.getText().toString();
+                Quantitys2=e6.getText().toString();
+
+                userId=auth.getCurrentUser().getUid();
+                DocumentReference dr=firestore.collection("products").document(userId);
+                Map<String,Object> user=new HashMap<>();
+
+                user.put("Pizza1",pizza1);
+                user.put("Pizza2",pizza2);
+                user.put("Donut1",donut1);
+                user.put("Donut2",donut2);
+                user.put("Sandwitch1",sandwitch1);
+                user.put("Sandwitch2",sandwitch2);
+                user.put("Quantityp1",Quantityp1);
+                user.put("Quantityp2",Quantityp2);
+                user.put("Quantityd1",Quantityd1);
+                user.put("Quantityd2",Quantityd2);
+                user.put("Quantitys1",Quantitys1);
+                user.put("Quantitys2",Quantitys2);
+
+                dr.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(MainActivity.this, "Updated", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
 
     }
 }
