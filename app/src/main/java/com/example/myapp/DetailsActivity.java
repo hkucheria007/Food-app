@@ -65,31 +65,21 @@ public class DetailsActivity extends AppCompatActivity {
                 city=ct.getText().toString();
                 pincode=pin.getText().toString();
 
-                userId=auth.getCurrentUser().getUid();
-                DocumentReference dr=firestore.collection("CustomerDetails").document(userId);
-                Map<String,Object> user=new HashMap<>();
-                user.put("FirstName",first);
-                user.put("LastName",last);
-                user.put("Mobile",number);
-                user.put("Address1",address1);
-                user.put("Address2",address2);
-                user.put("Address3",address3);
-                user.put("City",city);
-                user.put("Pincode",pincode);
+                Intent in=new Intent(DetailsActivity.this,Invoice.class);
+                in.putExtra("First",first);
+                in.putExtra("Last",last);
+                in.putExtra("Mobile",number);
+                in.putExtra("Add1",address1);
+                in.putExtra("Add2",address2);
+                in.putExtra("Add3",address3);
+                in.putExtra("City",city);
+                in.putExtra("Pincode",pincode);
+                Bundle bundle=getIntent().getExtras();
+                if(bundle!=null){
+                    in.putExtras(bundle);
+                }
+                startActivity(in);
 
-                dr.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-//                        Intent i=new Intent(DetailsActivity.this,MainActivity.class);
-//                        startActivity(i);
-                        Toast.makeText(DetailsActivity.this, "Database Updated", Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(DetailsActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
             }
         });
 
