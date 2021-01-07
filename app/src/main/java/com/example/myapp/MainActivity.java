@@ -356,23 +356,25 @@ public class MainActivity extends AppCompatActivity {
                 DocumentReference dr=firestore.collection("products").document(userId);
                 Map<String,Object> user=new HashMap<>();
 
-                user.put("Pizza1",pizza1);
-                user.put("Pizza2",pizza2);
-                user.put("Donut1",donut1);
-                user.put("Donut2",donut2);
-                user.put("Sandwitch1",sandwitch1);
-                user.put("Sandwitch2",sandwitch2);
-                user.put("Quantityp1",Quantityp1);
-                user.put("Quantityp2",Quantityp2);
-                user.put("Quantityd1",Quantityd1);
-                user.put("Quantityd2",Quantityd2);
-                user.put("Quantitys1",Quantitys1);
-                user.put("Quantitys2",Quantitys2);
+                user.put("Pizza1",Quantityp1);
+                user.put("Pizza2",Quantityp2);
+                user.put("Donut1",Quantityd1);
+                user.put("Donut2",Quantityd2);
+                user.put("Sandwitch1",Quantitys1);
+                user.put("Sandwitch2",Quantitys2);
+//                user.put("Quantityp1",Quantityp1);
+//                user.put("Quantityp2",Quantityp2);
+//                user.put("Quantityd1",Quantityd1);
+//                user.put("Quantityd2",Quantityd2);
+//                user.put("Quantitys1",Quantitys1);
+//                user.put("Quantitys2",Quantitys2);
 
                 dr.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(MainActivity.this, "Updated", Toast.LENGTH_SHORT).show();
+                        Intent i=new Intent(MainActivity.this,DetailsActivity.class);
+                        startActivity(i);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
