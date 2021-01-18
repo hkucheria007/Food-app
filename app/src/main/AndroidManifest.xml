@@ -9,15 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp">
-        <activity android:name=".AdminPage"></activity>
-        <activity android:name=".VerifyAdmin" />
-        <activity android:name=".AdminLogin" />
-        <activity android:name=".LoginActivity" />
         <activity android:name=".Invoice" />
         <activity android:name=".DetailsActivity" />
         <activity android:name=".VerifyMobile" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".StartPage">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
