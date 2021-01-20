@@ -68,10 +68,16 @@ public class LoginActivity extends AppCompatActivity {
                         Intent i = new Intent(LoginActivity.this, VerifyMobile.class);
                         i.putExtra("Mobile", mobile);
                         startActivity(i);
+                        finish();
 
                 }
             });
         }
-//        firestore = FirebaseFirestore.getInstance();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

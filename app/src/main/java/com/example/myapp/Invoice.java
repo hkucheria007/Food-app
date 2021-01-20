@@ -102,7 +102,7 @@ public class Invoice extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(Invoice.this, "Updated", Toast.LENGTH_SHORT).show();
-//                        Intent i=new Intent(MainActivity.this,DetailsActivity.class);
+//                        Intent i=new Intent(Invoice.this,MainActivity.class);
 //                        startActivity(i);
                             }
                         }).addOnFailureListener(new OnFailureListener() {
@@ -130,8 +130,6 @@ public class Invoice extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(Invoice.this, "Database Updated", Toast.LENGTH_SHORT).show();
-//                        Intent i=new Intent(DetailsActivity.this,Invoice.class);
-//                        startActivity(i);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -141,7 +139,18 @@ public class Invoice extends AppCompatActivity {
                 });
 
                         Toast.makeText(Invoice.this, "Order Placed", Toast.LENGTH_SHORT).show();
+                        Intent i=new Intent(Invoice.this,MainActivity.class);
+                        startActivity(i);
+                        finish();
                     }
                 });
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(Invoice.this,DetailsActivity.class));
+        finish();
     }
 }

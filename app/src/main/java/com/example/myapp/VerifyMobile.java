@@ -108,6 +108,7 @@ public class VerifyMobile extends AppCompatActivity {
                     Intent i = new Intent(VerifyMobile.this, MainActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(i);
+                    finish();
                 } else {
                     String message = "Something is wrong";
                     if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
@@ -117,5 +118,12 @@ public class VerifyMobile extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(VerifyMobile.this,LoginActivity.class));
+        finish();
     }
 }

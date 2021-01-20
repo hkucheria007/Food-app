@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +17,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -65,23 +68,49 @@ public class DetailsActivity extends AppCompatActivity {
                 city=ct.getText().toString();
                 pincode=pin.getText().toString();
 
-                Intent in=new Intent(DetailsActivity.this,Invoice.class);
-                in.putExtra("First",first);
-                in.putExtra("Last",last);
-                in.putExtra("Mobile",number);
-                in.putExtra("Add1",address1);
-                in.putExtra("Add2",address2);
-                in.putExtra("Add3",address3);
-                in.putExtra("City",city);
-                in.putExtra("Pincode",pincode);
-                Bundle bundle=getIntent().getExtras();
-                if(bundle!=null){
-                    in.putExtras(bundle);
-                }
-                startActivity(in);
+                if(TextUtils.isEmpty(first)){
+                    fn.setError("Can't leave Firstname Empty");
+                }else if(TextUtils.isEmpty(last)){
+                    ln.setError("Can't leave Lastname Empty");
+                }else if(number.length()<10 || number.length()>10){
+                    mno.setError("Enter Valid Number");
+                }else if (TextUtils.isEmpty(address1)){
+                    add1.setError("Can't leave Address1 Empty");
+                }else if (TextUtils.isEmpty(address2)){
+                    add2.setError("Can't leave Address2 Empty");
+                }else if (TextUtils.isEmpty(address3)){
+                    add3.setError("Can't leave Address3 Empty");
+                }else if (TextUtils.isEmpty(city)){
+                    ct.setError("Can't leave City Empty");
+                }else if (TextUtils.isEmpty(pincode)){
+                    pin.setError("Can't leave Pincode Empty");
+                }else {
 
+                    Intent in = new Intent(DetailsActivity.this, Invoice.class);
+                    in.putExtra("First", first);
+                    in.putExtra("Last", last);
+                    in.putExtra("Mobile", number);
+                    in.putExtra("Add1", address1);
+                    in.putExtra("Add2", address2);
+                    in.putExtra("Add3", address3);
+                    in.putExtra("City", city);
+                    in.putExtra("Pincode", pincode);
+                    Bundle bundle = getIntent().getExtras();
+                    if (bundle != null) {
+                        in.putExtras(bundle);
+                    }
+                    startActivity(in);
+                    finish();
+                }
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(DetailsActivity.this,MainActivity.class));
+        finish();
     }
 }

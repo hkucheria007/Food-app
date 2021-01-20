@@ -360,9 +360,16 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("QS1",Quantitys1);
                 i.putExtra("QS2",Quantitys2);
                 startActivity(i);
-
+                finish();
             }
      });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        moveTaskToBack(true);
+        finish();
     }
 }
