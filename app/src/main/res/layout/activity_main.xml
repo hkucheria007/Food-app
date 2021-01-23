@@ -10,7 +10,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:elevation="2dp">
 
 
     <TextView
@@ -18,24 +21,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pizza"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
         android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
 
 
     <LinearLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:orientation="horizontal"
         android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/veg" />
 
         <TextView
             android:id="@+id/First1TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="Pizza1" />
+            android:layout_marginTop="3dp"
+            android:text="Pizza1"
+            android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/Price1TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="6dp"
+                android:text="70" />
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView1"
@@ -54,6 +88,7 @@
             android:ems="1"
             android:inputType="number"
             android:gravity="center"
+            android:layout_marginTop="65dp"
             android:text="0" />
 
         <ImageView
@@ -67,19 +102,51 @@
     </LinearLayout>
 
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
+
         <LinearLayout
             android:id="@+id/layout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:orientation="horizontal"
             android:layout_marginTop="10dp">
+
+             <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+            <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/veg" />
 
             <TextView
                 android:id="@+id/First2TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
                 android:text="Pizza2" />
+
+                 <TextView
+                     android:id="@+id/Price2TV"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:layout_marginTop="6dp"
+                     android:text="70" />
+
+
+             </LinearLayout>
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -96,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="1"
+                android:layout_marginTop="65dp"
                 android:inputType="number"
                 android:gravity="center"
                 android:text="0" />
@@ -111,29 +179,67 @@
         </LinearLayout>
 
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#c0c0c0"/>
+
     <TextView
         android:id="@+id/SecondTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Donuts"
+        android:textColor="@color/black"
         android:textSize="24sp"
-        android:layout_marginTop="20dp"
         android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
         android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
 
     <LinearLayout
         android:id="@+id/layout3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:orientation="horizontal"
         android:layout_marginTop="10dp">
+
+             <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+            <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/veg" />
+
 
         <TextView
             android:id="@+id/Second1TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
             android:text="Donut1" />
+
+                 <TextView
+                     android:id="@+id/Price3TV"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:layout_marginTop="6dp"
+                     android:text="70" />
+
+
+             </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView5"
@@ -150,6 +256,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="1"
+            android:layout_marginTop="65dp"
             android:inputType="number"
             android:gravity="center"
             android:text="0" />
@@ -165,19 +272,51 @@
     </LinearLayout>
 
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
+
     <LinearLayout
         android:id="@+id/layout4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:orientation="horizontal"
         android:layout_marginTop="10dp">
 
-        <TextView
-            android:id="@+id/Second2TV"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Donut2" />
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/veg" />
+
+            <TextView
+                android:id="@+id/Second2TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="Donut2" />
+
+            <TextView
+                android:id="@+id/Price4TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="6dp"
+                android:text="70" />
+
+
+        </LinearLayout>
+
 
         <ImageView
             android:id="@+id/imageView7"
@@ -194,6 +333,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="1"
+            android:layout_marginTop="65dp"
             android:inputType="number"
             android:gravity="center"
             android:text="0" />
@@ -208,29 +348,70 @@
 
     </LinearLayout>
 
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#c0c0c0"/>
+
         <TextView
             android:id="@+id/ThirdTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sandwitch"
+            android:textColor="@color/black"
             android:textSize="24sp"
-            android:layout_marginTop="20dp"
             android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
             android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
 
         <LinearLayout
             android:id="@+id/layout5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:orientation="horizontal"
             android:layout_marginTop="10dp">
 
-            <TextView
-                android:id="@+id/Third1TV"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="Sandwitch1" />
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/veg" />
+
+
+                <TextView
+                    android:id="@+id/Third1TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:text="Sandwitch1" />
+
+
+                <TextView
+                    android:id="@+id/Price5TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="6dp"
+                    android:text="70" />
+
+
+            </LinearLayout>
+
+
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -247,6 +428,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="1"
+                android:layout_marginTop="65dp"
                 android:inputType="number"
                 android:gravity="center"
                 android:text="0" />
@@ -262,19 +444,51 @@
         </LinearLayout>
 
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
+
         <LinearLayout
             android:id="@+id/layout6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:orientation="horizontal"
             android:layout_marginTop="10dp">
 
-            <TextView
-                android:id="@+id/Third2TV"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="Sandwitch2" />
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/veg" />
+
+                <TextView
+                    android:id="@+id/Third2TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:text="Sandwitch2" />
+
+
+                <TextView
+                    android:id="@+id/Price6TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="6dp"
+                    android:text="70" />
+
+            </LinearLayout>
+
 
             <ImageView
                 android:id="@+id/imageView11"
@@ -291,6 +505,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="1"
+                android:layout_marginTop="65dp"
                 android:inputType="number"
                 android:gravity="center"
                 android:text="0" />
@@ -305,6 +520,11 @@
 
         </LinearLayout>
 
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"/>
 
         <Button
             android:id="@+id/button"
