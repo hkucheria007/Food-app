@@ -27,19 +27,19 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     //First
-    TextView t1,t2,t3;
+    TextView t1,t2,t3,price1,price2;
     ImageView img1,img2,img3,img4;
     TextView e1,e2;
     LinearLayout lay1,lay2;
 
     //Second
-    TextView t4,t5,t6;
+    TextView t4,t5,t6,price3,price4;
     ImageView img5,img6,img7,img8;
     TextView e3,e4;
     LinearLayout lay3,lay4;
 
     //Third
-    TextView t7,t8,t9;
+    TextView t7,t8,t9,price5,price6;
     ImageView img9,img10,img11,img12;
     TextView e5,e6;
     LinearLayout lay5,lay6;
@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     String userId;
     String pizza1,pizza2,donut1,donut2,sandwitch1,sandwitch2;
     String Quantityp1,Quantityp2,Quantityd1,Quantityd2,Quantitys1,Quantitys2;
+    String p1,p2,p3,p4,p5,p6;
+    String pp1,pp2,pd1,pd2,ps1,ps2,grandtotal;
 
     int count=0;
     boolean first=true,second=true,third=true;
@@ -70,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         t1=findViewById(R.id.FirstTV);
         t2=findViewById(R.id.First1TV);
         t3=findViewById(R.id.First2TV);
+        price1=findViewById(R.id.Price1TV);
+        price2=findViewById(R.id.Price2TV);
 
 
         img1=findViewById(R.id.imageView1);
@@ -154,6 +158,8 @@ public class MainActivity extends AppCompatActivity {
         t4=findViewById(R.id.SecondTV);
         t5=findViewById(R.id.Second1TV);
         t6=findViewById(R.id.Second2TV);
+        price3=findViewById(R.id.Price3TV);
+        price4=findViewById(R.id.Price4TV);
 
 
         img5=findViewById(R.id.imageView5);
@@ -240,7 +246,8 @@ public class MainActivity extends AppCompatActivity {
         t7=findViewById(R.id.ThirdTV);
         t8=findViewById(R.id.Third1TV);
         t9=findViewById(R.id.Third2TV);
-
+        price5=findViewById(R.id.Price5TV);
+        price6=findViewById(R.id.Price6TV);
 
         img9=findViewById(R.id.imageView9);
         img10=findViewById(R.id.imageView10);
@@ -352,6 +359,23 @@ public class MainActivity extends AppCompatActivity {
                 Quantitys1=e5.getText().toString();
                 Quantitys2=e6.getText().toString();
 
+                //Price
+                p1=price1.getText().toString();
+                p2=price2.getText().toString();
+                p3=price3.getText().toString();
+                p4=price4.getText().toString();
+                p5=price5.getText().toString();
+                p6=price6.getText().toString();
+
+                //Total
+                pp1=String.valueOf(Integer.valueOf(Quantityp1)*Integer.valueOf(p1));
+                pp2=String.valueOf(Integer.valueOf(Quantityp2)*Integer.valueOf(p2));
+                pd1=String.valueOf(Integer.valueOf(Quantityd1)*Integer.valueOf(p3));
+                pd2=String.valueOf(Integer.valueOf(Quantityd2)*Integer.valueOf(p4));
+                ps1=String.valueOf(Integer.valueOf(Quantitys1)*Integer.valueOf(p5));
+                ps2=String.valueOf(Integer.valueOf(Quantitys2)*Integer.valueOf(p6));
+                grandtotal=String.valueOf(Integer.valueOf(pp1)+Integer.valueOf(pp2)+Integer.valueOf(pd1)+Integer.valueOf(pd2)+Integer.valueOf(ps1)+Integer.valueOf(ps2));
+
                 Intent i=new Intent(MainActivity.this,DetailsActivity.class);
                 i.putExtra("QP1",Quantityp1);
                 i.putExtra("QP2",Quantityp2);
@@ -359,6 +383,13 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("QD2",Quantityd2);
                 i.putExtra("QS1",Quantitys1);
                 i.putExtra("QS2",Quantitys2);
+                i.putExtra("Price1",p1);
+                i.putExtra("Price2",p2);
+                i.putExtra("Price3",p3);
+                i.putExtra("Price4",p4);
+                i.putExtra("Price5",p5);
+                i.putExtra("Price6",p6);
+                i.putExtra("GrandTotal",grandtotal);
                 startActivity(i);
                 finish();
             }

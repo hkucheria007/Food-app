@@ -63,6 +63,15 @@ public class Invoice extends AppCompatActivity {
         String qd2=b.getString("QD2");
         String qs1=b.getString("QS1");
         String qs2=b.getString("QS2");
+        String p1=b.getString("Price1");
+        String p2=b.getString("Price2");
+        String p3=b.getString("Price3");
+        String p4=b.getString("Price4");
+        String p5=b.getString("Price5");
+        String p6=b.getString("Price6");
+        String grandtotal=b.getString("GrandTotal");
+
+        Toast.makeText(this, grandtotal, Toast.LENGTH_SHORT).show();
 
         String first=getIntent().getStringExtra("First");
         String last=getIntent().getStringExtra("Last");
