@@ -10,14 +10,15 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TIL1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        app:boxBackgroundColor="@color/white"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/mobileNo"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="300dp"
             android:inputType="number"
             android:hint="Mobile No" />
 
@@ -25,7 +26,6 @@
             android:id="@+id/getOTP"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="Get Otp" />
