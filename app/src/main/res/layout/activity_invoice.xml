@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Invoice">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,22 +15,77 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/p1"
-                android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pizza1"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
+                app:cardUseCompatPadding="true"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/RL1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <ImageView
+                android:id="@+id/vegimage1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/veg" />
+
 
             <TextView
                 android:id="@+id/qp1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="21dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/vegimage1"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/p1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pizza1"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/qp1"
+                android:textSize="21dp"/>
+
+            <TextView
+                android:id="@+id/priceP1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:textSize="21dp"
+                android:textColor="@color/black"/>
+
+
+                    <ImageView
+                android:id="@+id/vegimage2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/p1"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/veg" />
+
+
+            <TextView
+                android:id="@+id/qp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/qp1"
+                android:textSize="21dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/vegimage2"
+                android:textColor="@color/black"
                 />
 
             <TextView
@@ -39,115 +93,206 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pizza2"
-                android:textStyle="bold"
+                android:layout_toRightOf="@id/qp2"
                 android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@+id/p1"
-                android:layout_marginTop="10sp"
-                android:textSize="20sp"/>
+                android:textSize="21dp"/>
 
             <TextView
-                android:id="@+id/qp2"
+                android:id="@+id/priceP2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/qp1"
-                android:textSize="20sp"
-                android:layout_marginTop="10sp"
-                android:textStyle="bold"
-                />
+                android:textSize="21dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/priceP1"
+                android:textColor="@color/black"/>
 
+
+            <ImageView
+                android:id="@+id/vegimage3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/p2"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/veg" />
+
+
+            <TextView
+                android:id="@+id/qd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/qp2"
+                android:textSize="21dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/vegimage3"
+                android:textColor="@color/black"
+                />
 
             <TextView
                 android:id="@+id/d1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Donut1"
-                android:textStyle="bold"
+                android:layout_toRightOf="@id/qd1"
                 android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
                 android:layout_below="@+id/p2"
-                android:layout_marginTop="10sp"
-                android:textSize="20sp"/>
+                android:textSize="21dp"/>
 
             <TextView
-                android:id="@+id/qd1"
+                android:id="@+id/priceD1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/qp2"
-                android:textSize="20sp"
-                android:layout_marginTop="10sp"
-                android:textStyle="bold"
-                />
+                android:textSize="21dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/priceP2"
+                android:textColor="@color/black"/>
 
+
+
+            <ImageView
+                android:id="@+id/vegimage4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/d1"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/veg" />
+
+
+            <TextView
+                android:id="@+id/qd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/qd1"
+                android:textSize="21dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/vegimage4"
+                android:textColor="@color/black"
+                />
 
             <TextView
                 android:id="@+id/d2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Donut2"
-                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/qd2"
                 android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
                 android:layout_below="@+id/d1"
-                android:layout_marginTop="10sp"
-                android:textSize="20sp"/>
+                android:textSize="21dp"/>
 
             <TextView
-                android:id="@+id/qd2"
+                android:id="@+id/priceD2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/qd1"
-                android:textSize="20sp"
-                android:layout_marginTop="10sp"
-                android:textStyle="bold"
-                />
+                android:textSize="21dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/priceD1"
+                android:textColor="@color/black"/>
 
 
-            <TextView
-                android:id="@+id/s1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sandwich1"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_below="@+id/d2"
-                android:layout_marginTop="10sp"
-                android:textSize="20sp"/>
+            <ImageView
+                android:id="@+id/vegimage5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/d2"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/veg" />
+
 
             <TextView
                 android:id="@+id/qs1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_below="@+id/qd2"
-                android:textSize="20sp"
-                android:layout_marginTop="10sp"
-                android:textStyle="bold"
+                android:textSize="21dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/vegimage5"
+                android:textColor="@color/black"
                 />
-
 
             <TextView
-                android:id="@+id/s2"
+                android:id="@+id/s1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sandwich2"
-                android:textStyle="bold"
+                android:text="Sandwitch1"
+                android:layout_toRightOf="@id/qs1"
                 android:textColor="@color/black"
-                android:layout_below="@+id/s1"
-                android:layout_marginTop="10sp"
-                android:textSize="20sp"
-                />
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/d2"
+                android:textSize="21dp"/>
+
+            <TextView
+                android:id="@+id/priceS1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="21dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/priceD2"
+                android:textColor="@color/black"/>
+
+
+            <ImageView
+                android:id="@+id/vegimage6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/s1"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/veg" />
+
 
             <TextView
                 android:id="@+id/qs2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_below="@+id/qs1"
-                android:textSize="20sp"
-                android:layout_marginTop="10sp"
-                android:textStyle="bold"
+                android:textSize="21dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/vegimage6"
+                android:textColor="@color/black"
                 />
+
+            <TextView
+                android:id="@+id/s2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sandwitch2"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/qs2"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/s1"
+                android:textSize="21dp"/>
+
+            <TextView
+                android:id="@+id/priceS2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="21dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/priceS1"
+                android:textColor="@color/black"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
             <Button
                 android:id="@+id/Order"
@@ -160,10 +305,8 @@
         </RelativeLayout>
 
 
-    </ScrollView>
-
-
-
-
+</ScrollView>
 
 </RelativeLayout>
+
+

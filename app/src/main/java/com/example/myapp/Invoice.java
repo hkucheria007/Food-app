@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,8 @@ import java.util.Map;
 public class Invoice extends AppCompatActivity {
 
     TextView piz1,piz2,do1,do2,san1,san2,qpiz1,qpiz2,qdo1,qdo2,qsan1,qsan2;
+    TextView prip1,prip2,prid1,prid2,pris1,pris2;
+    ImageView i1,i2,i3,i4,i5,i6;
     FirebaseFirestore firestore;
     FirebaseAuth auth;
     String userId;
@@ -40,6 +43,7 @@ public class Invoice extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         firestore=FirebaseFirestore.getInstance();
 
+        //Item TextView
         piz1=findViewById(R.id.p1);
         piz2=findViewById(R.id.p2);
         do1=findViewById(R.id.d1);
@@ -47,6 +51,7 @@ public class Invoice extends AppCompatActivity {
         san1=findViewById(R.id.s1);
         san2=findViewById(R.id.s2);
 
+        //Quantity TextView
         qpiz1=findViewById(R.id.qp1);
         qpiz2=findViewById(R.id.qp2);
         qdo1=findViewById(R.id.qd1);
@@ -54,6 +59,23 @@ public class Invoice extends AppCompatActivity {
         qsan1=findViewById(R.id.qs1);
         qsan2=findViewById(R.id.qs2);
 
+        //Price TextView
+        prip1=findViewById(R.id.priceP1);
+        prip2=findViewById(R.id.priceP2);
+        prid1=findViewById(R.id.priceD1);
+        prid2=findViewById(R.id.priceD2);
+        pris1=findViewById(R.id.priceS1);
+        pris2=findViewById(R.id.priceS2);
+
+        //Veg ImageView
+        i1=findViewById(R.id.vegimage1);
+        i2=findViewById(R.id.vegimage2);
+        i3=findViewById(R.id.vegimage3);
+        i4=findViewById(R.id.vegimage4);
+        i5=findViewById(R.id.vegimage5);
+        i6=findViewById(R.id.vegimage6);
+
+        //Buuton
         place=findViewById(R.id.Order);
 
         Bundle b=getIntent().getExtras();
@@ -63,12 +85,12 @@ public class Invoice extends AppCompatActivity {
         String qd2=b.getString("QD2");
         String qs1=b.getString("QS1");
         String qs2=b.getString("QS2");
-        String p1=b.getString("Price1");
-        String p2=b.getString("Price2");
-        String p3=b.getString("Price3");
-        String p4=b.getString("Price4");
-        String p5=b.getString("Price5");
-        String p6=b.getString("Price6");
+        String pp1=b.getString("PriceP1");
+        String pp2=b.getString("PriceP2");
+        String pd1=b.getString("PriceD1");
+        String pd2=b.getString("PriceD2");
+        String ps1=b.getString("PriceS1");
+        String ps2=b.getString("PriceS2");
         String grandtotal=b.getString("GrandTotal");
 
         Toast.makeText(this, grandtotal, Toast.LENGTH_SHORT).show();
@@ -82,13 +104,21 @@ public class Invoice extends AppCompatActivity {
         String city=getIntent().getStringExtra("City");
         String pincode=getIntent().getStringExtra("Pincode");
 
+                //Quantity TextView SetText
+                qpiz1.setText(qp1);
+                qpiz2.setText(qp2);
+                qdo1.setText(qd1);
+                qdo2.setText(qd2);
+                qsan1.setText(qs1);
+                qsan2.setText(qs2);
 
-                qpiz1.setText("x"+qp1);
-                qpiz2.setText("x"+qp2);
-                qdo1.setText("x"+qd1);
-                qdo2.setText("x"+qd2);
-                qsan1.setText("x"+qs1);
-                qsan2.setText("x"+qs2);
+                //Price TextView SetText
+                prip1.setText(pp1);
+                prip2.setText(pp2);
+                prid1.setText(pd1);
+                prid2.setText(pd2);
+                pris1.setText(ps1);
+                pris2.setText(ps2);
 
 
                 place.setOnClickListener(new View.OnClickListener() {

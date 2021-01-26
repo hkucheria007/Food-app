@@ -383,12 +383,12 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("QD2",Quantityd2);
                 i.putExtra("QS1",Quantitys1);
                 i.putExtra("QS2",Quantitys2);
-                i.putExtra("Price1",p1);
-                i.putExtra("Price2",p2);
-                i.putExtra("Price3",p3);
-                i.putExtra("Price4",p4);
-                i.putExtra("Price5",p5);
-                i.putExtra("Price6",p6);
+                i.putExtra("PriceP1",pp1);
+                i.putExtra("PriceP2",pp2);
+                i.putExtra("PriceD1",pd1);
+                i.putExtra("PriceD2",pd2);
+                i.putExtra("PriceS1",ps1);
+                i.putExtra("PriceS2",ps2);
                 i.putExtra("GrandTotal",grandtotal);
                 startActivity(i);
                 finish();
