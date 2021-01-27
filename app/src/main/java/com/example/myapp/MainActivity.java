@@ -26,6 +26,8 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
+    String quantity="0";
+
     //First
     TextView t1,t2,t3,price1,price2;
     ImageView img1,img2,img3,img4;
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         //Button Implementation
         next=findViewById(R.id.button);
         logout=findViewById(R.id.logout);
+
         auth=FirebaseAuth.getInstance();
         firestore=FirebaseFirestore.getInstance();
 
@@ -338,6 +341,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
         //next button
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -359,6 +365,7 @@ public class MainActivity extends AppCompatActivity {
                 Quantitys1=e5.getText().toString();
                 Quantitys2=e6.getText().toString();
 
+
                 //Price
                 p1=price1.getText().toString();
                 p2=price2.getText().toString();
@@ -376,22 +383,28 @@ public class MainActivity extends AppCompatActivity {
                 ps2=String.valueOf(Integer.valueOf(Quantitys2)*Integer.valueOf(p6));
                 grandtotal=String.valueOf(Integer.valueOf(pp1)+Integer.valueOf(pp2)+Integer.valueOf(pd1)+Integer.valueOf(pd2)+Integer.valueOf(ps1)+Integer.valueOf(ps2));
 
-                Intent i=new Intent(MainActivity.this,DetailsActivity.class);
-                i.putExtra("QP1",Quantityp1);
-                i.putExtra("QP2",Quantityp2);
-                i.putExtra("QD1",Quantityd1);
-                i.putExtra("QD2",Quantityd2);
-                i.putExtra("QS1",Quantitys1);
-                i.putExtra("QS2",Quantitys2);
-                i.putExtra("PriceP1",pp1);
-                i.putExtra("PriceP2",pp2);
-                i.putExtra("PriceD1",pd1);
-                i.putExtra("PriceD2",pd2);
-                i.putExtra("PriceS1",ps1);
-                i.putExtra("PriceS2",ps2);
-                i.putExtra("GrandTotal",grandtotal);
-                startActivity(i);
-                finish();
+
+                if(!Quantityp1.equals(quantity)||!Quantityp2.equals(quantity)||!Quantityd1.equals(quantity)||!Quantityd2.equals(quantity)||!Quantitys1.equals(quantity)||!Quantitys2.equals(quantity)){
+                    Intent i = new Intent(MainActivity.this, DetailsActivity.class);
+                    i.putExtra("QP1", Quantityp1);
+                    i.putExtra("QP2", Quantityp2);
+                    i.putExtra("QD1", Quantityd1);
+                    i.putExtra("QD2", Quantityd2);
+                    i.putExtra("QS1", Quantitys1);
+                    i.putExtra("QS2", Quantitys2);
+                    i.putExtra("PriceP1", pp1);
+                    i.putExtra("PriceP2", pp2);
+                    i.putExtra("PriceD1", pd1);
+                    i.putExtra("PriceD2", pd2);
+                    i.putExtra("PriceS1", ps1);
+                    i.putExtra("PriceS2", ps2);
+                    i.putExtra("GrandTotal", grandtotal);
+                    startActivity(i);
+                    finish();
+                }
+                else {
+                    Toast.makeText(MainActivity.this, "Please Add Some food items", Toast.LENGTH_SHORT).show();
+                }
             }
      });
 

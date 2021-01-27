@@ -32,7 +32,7 @@ public class Invoice extends AppCompatActivity {
     ImageView i1,i2,i3,i4,i5,i6;
     FirebaseFirestore firestore;
     FirebaseAuth auth;
-    String userId;
+    String userId,quantity="0";
     Button place;
 
     @Override
@@ -104,21 +104,110 @@ public class Invoice extends AppCompatActivity {
         String city=getIntent().getStringExtra("City");
         String pincode=getIntent().getStringExtra("Pincode");
 
-                //Quantity TextView SetText
-                qpiz1.setText(qp1);
-                qpiz2.setText(qp2);
-                qdo1.setText(qd1);
-                qdo2.setText(qd2);
-                qsan1.setText(qs1);
-                qsan2.setText(qs2);
+        //pizza1 quantity check
+        if(!qp1.equals(quantity)){
+            i1.setVisibility(View.VISIBLE);
+            qpiz1.setVisibility(View.VISIBLE);
+            piz1.setVisibility(View.VISIBLE);
+            prip1.setVisibility(View.VISIBLE);
+            qpiz1.setText(qp1);
+            prip1.setText(pp1);
+        }else {
+            i1.setVisibility(View.GONE);
+            qpiz1.setVisibility(View.GONE);
+            piz1.setVisibility(View.GONE);
+            prip1.setVisibility(View.GONE);
+        }
 
-                //Price TextView SetText
-                prip1.setText(pp1);
-                prip2.setText(pp2);
-                prid1.setText(pd1);
-                prid2.setText(pd2);
-                pris1.setText(ps1);
-                pris2.setText(ps2);
+        //pizza2 quantity check
+        if(!qp2.equals(quantity)){
+            i2.setVisibility(View.VISIBLE);
+            qpiz2.setVisibility(View.VISIBLE);
+            piz2.setVisibility(View.VISIBLE);
+            prip2.setVisibility(View.VISIBLE);
+            qpiz2.setText(qp2);
+            prip2.setText(pp2);
+        }else {
+            i2.setVisibility(View.GONE);
+            qpiz2.setVisibility(View.GONE);
+            piz2.setVisibility(View.GONE);
+            prip2.setVisibility(View.GONE);
+        }
+
+        //Donut1 quantity check
+        if(!qd1.equals(quantity)){
+            i3.setVisibility(View.VISIBLE);
+            qdo1.setVisibility(View.VISIBLE);
+            do1.setVisibility(View.VISIBLE);
+            prid1.setVisibility(View.VISIBLE);
+            qdo1.setText(qd1);
+            prid1.setText(pd1);
+        }else {
+            i3.setVisibility(View.GONE);
+            qdo1.setVisibility(View.GONE);
+            do1.setVisibility(View.GONE);
+            prid1.setVisibility(View.GONE);
+        }
+
+
+        if(!qd2.equals(quantity)){
+            i4.setVisibility(View.VISIBLE);
+            qdo2.setVisibility(View.VISIBLE);
+            do2.setVisibility(View.VISIBLE);
+            prid2.setVisibility(View.VISIBLE);
+            qdo2.setText(qd2);
+            prid2.setText(pd2);
+        }else {
+            i4.setVisibility(View.GONE);
+            qdo2.setVisibility(View.GONE);
+            do2.setVisibility(View.GONE);
+            prid2.setVisibility(View.GONE);
+        }
+
+
+        if(!qs1.equals(quantity)){
+            i5.setVisibility(View.VISIBLE);
+            qsan1.setVisibility(View.VISIBLE);
+            san1.setVisibility(View.VISIBLE);
+            pris1.setVisibility(View.VISIBLE);
+            qsan1.setText(qs1);
+            pris1.setText(ps1);
+        }else {
+            i5.setVisibility(View.GONE);
+            qsan1.setVisibility(View.GONE);
+            san1.setVisibility(View.GONE);
+            pris1.setVisibility(View.GONE);
+        }
+
+
+        if(!qs2.equals(quantity)){
+            i6.setVisibility(View.VISIBLE);
+            qsan2.setVisibility(View.VISIBLE);
+            san2.setVisibility(View.VISIBLE);
+            pris2.setVisibility(View.VISIBLE);
+            qsan2.setText(qs2);
+            pris2.setText(ps2);
+        }else {
+            i6.setVisibility(View.GONE);
+            qsan2.setVisibility(View.GONE);
+            san2.setVisibility(View.GONE);
+            pris2.setVisibility(View.GONE);
+        }
+//                //Quantity TextView SetText
+//                qpiz1.setText(qp1);
+//                qpiz2.setText(qp2);
+//                qdo1.setText(qd1);
+//                qdo2.setText(qd2);
+//                qsan1.setText(qs1);
+//                qsan2.setText(qs2);
+//
+//                //Price TextView SetText
+//                prip1.setText(pp1);
+//                prip2.setText(pp2);
+//                prid1.setText(pd1);
+//                prid2.setText(pd2);
+//                pris1.setText(ps1);
+//                pris2.setText(ps2);
 
 
                 place.setOnClickListener(new View.OnClickListener() {

@@ -18,6 +18,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 app:cardUseCompatPadding="true"
                 app:cardElevation="10dp"
                 app:cardCornerRadius="3dp">
@@ -25,27 +26,30 @@
                 <RelativeLayout
                     android:id="@+id/RL1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
 
 
                 <ImageView
                 android:id="@+id/vegimage1"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_alignParentStart="true"
-                app:srcCompat="@drawable/veg" />
+                app:srcCompat="@drawable/veg"
+                    android:visibility="gone"/>
 
 
             <TextView
                 android:id="@+id/qp1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/vegimage1"
                 android:textColor="@color/black"
-                />
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/p1"
@@ -55,25 +59,29 @@
                 android:textColor="@color/black"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/qp1"
-                android:textSize="21dp"/>
+                android:textSize="15dp"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/priceP1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="21dp"
-                android:textColor="@color/black"/>
+                android:textSize="15dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
 
 
                     <ImageView
                 android:id="@+id/vegimage2"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/p1"
                 android:layout_alignParentStart="true"
-                app:srcCompat="@drawable/veg" />
+                app:srcCompat="@drawable/veg"
+                        android:visibility="gone"/>
 
 
             <TextView
@@ -81,11 +89,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/qp1"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@id/vegimage2"
                 android:textColor="@color/black"
+                android:visibility="gone"
                 />
 
             <TextView
@@ -98,27 +107,31 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_below="@+id/p1"
-                android:textSize="21dp"/>
+                android:textSize="15dp"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/priceP2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
                 android:layout_below="@id/priceP1"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:visibility="gone"/>
 
 
             <ImageView
                 android:id="@+id/vegimage3"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/p2"
                 android:layout_alignParentStart="true"
-                app:srcCompat="@drawable/veg" />
+                app:srcCompat="@drawable/veg"
+                android:visibility="gone"/>
 
 
             <TextView
@@ -126,11 +139,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/qp2"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/vegimage3"
                 android:textColor="@color/black"
+                android:visibility="gone"
                 />
 
             <TextView
@@ -143,28 +157,32 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_below="@+id/p2"
-                android:textSize="21dp"/>
+                android:textSize="15dp"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/priceD1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
                 android:layout_below="@id/priceP2"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:visibility="gone"/>
 
 
 
             <ImageView
                 android:id="@+id/vegimage4"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/d1"
                 android:layout_alignParentStart="true"
-                app:srcCompat="@drawable/veg" />
+                app:srcCompat="@drawable/veg"
+                android:visibility="gone"/>
 
 
             <TextView
@@ -172,12 +190,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/qd1"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/vegimage4"
                 android:textColor="@color/black"
-                />
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/d2"
@@ -189,27 +207,31 @@
                 android:textColor="@color/black"
                 android:layout_marginLeft="5dp"
                 android:layout_below="@+id/d1"
-                android:textSize="21dp"/>
+                android:textSize="15dp"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/priceD2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
                 android:layout_below="@id/priceD1"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:visibility="gone"/>
 
 
             <ImageView
                 android:id="@+id/vegimage5"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/d2"
                 android:layout_alignParentStart="true"
-                app:srcCompat="@drawable/veg" />
+                app:srcCompat="@drawable/veg"
+                android:visibility="gone"/>
 
 
             <TextView
@@ -217,12 +239,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/qd2"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/vegimage5"
                 android:textColor="@color/black"
-                />
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/s1"
@@ -234,27 +256,31 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_below="@+id/d2"
-                android:textSize="21dp"/>
+                android:textSize="15dp"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/priceS1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
                 android:layout_below="@id/priceD2"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:visibility="gone"/>
 
 
             <ImageView
                 android:id="@+id/vegimage6"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/s1"
                 android:layout_alignParentStart="true"
-                app:srcCompat="@drawable/veg" />
+                app:srcCompat="@drawable/veg"
+                android:visibility="gone"/>
 
 
             <TextView
@@ -262,12 +288,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/qs1"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/vegimage6"
                 android:textColor="@color/black"
-                />
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/s2"
@@ -279,17 +305,20 @@
                 android:textColor="@color/black"
                 android:layout_marginLeft="5dp"
                 android:layout_below="@+id/s1"
-                android:textSize="21dp"/>
+                android:textSize="15dp"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/priceS2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="21dp"
+                android:textSize="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
                 android:layout_below="@id/priceS1"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:visibility="gone"/>
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
