@@ -29,10 +29,10 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#c0c0c0"/>
+            android:background="?android:attr/listDivider"/>
 
 
-    <LinearLayout
+        <LinearLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -105,7 +105,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#c0c0c0"/>
+            android:background="?android:attr/listDivider"/>
 
         <LinearLayout
             android:id="@+id/layout2"
@@ -182,7 +182,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="15dp"
-            android:background="#c0c0c0"/>
+            android:background="?android:attr/listDivider"/>
 
     <TextView
         android:id="@+id/SecondTV"
@@ -197,7 +197,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#c0c0c0"/>
+            android:background="?android:attr/listDivider"/>
 
     <LinearLayout
         android:id="@+id/layout3"
@@ -275,7 +275,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#c0c0c0"/>
+            android:background="?android:attr/listDivider"/>
 
     <LinearLayout
         android:id="@+id/layout4"
@@ -352,7 +352,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="15dp"
-            android:background="#c0c0c0"/>
+            android:background="?android:attr/listDivider"/>
 
         <TextView
             android:id="@+id/ThirdTV"
@@ -367,7 +367,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#c0c0c0"/>
+            android:background="?android:attr/listDivider"/>
 
         <LinearLayout
             android:id="@+id/layout5"
@@ -447,7 +447,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#c0c0c0"/>
+            android:background="?android:attr/listDivider"/>
 
         <LinearLayout
             android:id="@+id/layout6"
@@ -524,7 +524,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#c0c0c0"/>
+            android:background="?android:attr/listDivider"/>
 
         <Button
             android:id="@+id/button"

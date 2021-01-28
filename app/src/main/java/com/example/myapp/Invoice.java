@@ -27,6 +27,7 @@ import java.util.Map;
 
 public class Invoice extends AppCompatActivity {
 
+    TextView billheading,itemtotal,itemamount,deliveryfee,deliveryamount,topay,payamount;
     TextView piz1,piz2,do1,do2,san1,san2,qpiz1,qpiz2,qdo1,qdo2,qsan1,qsan2;
     TextView prip1,prip2,prid1,prid2,pris1,pris2;
     ImageView i1,i2,i3,i4,i5,i6;
@@ -78,6 +79,15 @@ public class Invoice extends AppCompatActivity {
         //Buuton
         place=findViewById(R.id.Order);
 
+        //Bill TextView
+        billheading=findViewById(R.id.BillHead);
+        itemtotal=findViewById(R.id.ItemTotal);
+        itemamount=findViewById(R.id.ItemAmount);
+        deliveryfee=findViewById(R.id.DeliveryFee);
+        deliveryamount=findViewById(R.id.DeliveryAmount);
+        topay=findViewById(R.id.Pay);
+        payamount=findViewById(R.id.PayAmount);
+
         Bundle b=getIntent().getExtras();
         String qp1=b.getString("QP1");
         String qp2=b.getString("QP2");
@@ -91,7 +101,14 @@ public class Invoice extends AppCompatActivity {
         String pd2=b.getString("PriceD2");
         String ps1=b.getString("PriceS1");
         String ps2=b.getString("PriceS2");
+
         String grandtotal=b.getString("GrandTotal");
+        String tax="20";
+        String totalPay=String.valueOf(Integer.valueOf(grandtotal)+Integer.valueOf(tax));
+
+        itemamount.setText(grandtotal);
+        deliveryamount.setText(tax);
+        payamount.setText(totalPay);
 
         Toast.makeText(this, grandtotal, Toast.LENGTH_SHORT).show();
 
