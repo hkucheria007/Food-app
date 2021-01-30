@@ -27,10 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     TextInputLayout t1;
     TextInputEditText te1;
     Button b1;
-    FirebaseAuth auth;
-    FirebaseFirestore firestore;
-    FirebaseUser CurrentUser;
-//    FirebaseFirestore firestore;
+
     String mobile;
 
     @Override
@@ -42,18 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         te1 = findViewById(R.id.mobileNo);
         b1 = findViewById(R.id.getOTP);
 
-        auth=FirebaseAuth.getInstance();
-        firestore=FirebaseFirestore.getInstance();
 
-        CurrentUser=FirebaseAuth.getInstance().getCurrentUser();
 
-        if(CurrentUser!=null) {
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
-                finish();
-        }
-
-        else{
             b1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -72,7 +59,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
             });
-        }
     }
 
     @Override
