@@ -20,14 +20,14 @@ public class SplashActivity extends AppCompatActivity {
     private final int splashLength=5000;
 
     FirebaseAuth auth;
-    FirebaseFirestore firestore;
     FirebaseUser CurrentUser;
-//    FirebaseFirestore firestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        auth = FirebaseAuth.getInstance();
 
     imageView=findViewById(R.id.splashImage);
     textView=findViewById(R.id.Slogan);
@@ -37,10 +37,9 @@ public class SplashActivity extends AppCompatActivity {
     new Handler().postDelayed(new Runnable() {
         @Override
         public void run() {
-            auth = FirebaseAuth.getInstance();
-            firestore = FirebaseFirestore.getInstance();
 
-            CurrentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+            CurrentUser = auth.getCurrentUser();
 
             if (CurrentUser != null) {
                 Intent i = new Intent(SplashActivity.this, MainActivity.class);

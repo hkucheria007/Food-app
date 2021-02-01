@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapp">
 
     <application
@@ -8,8 +9,11 @@
         android:label="HFD"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApp">
-        <activity android:name=".LoginActivity"></activity>
+        android:theme="@style/Theme.MyApp"
+        tools:replace="android:label,android:icon,android:theme">
+        <activity android:name=".Contact"></activity>
+        <activity android:name=".AboutUs" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".Invoice" />
         <activity android:name=".DetailsActivity" />
         <activity android:name=".VerifyMobile" />

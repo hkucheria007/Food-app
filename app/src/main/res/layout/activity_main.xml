@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:background="@color/purple_200"/>
 
+
         <TextView
         android:id="@+id/FirstTV"
         android:layout_width="match_parent"
@@ -42,24 +43,20 @@
             android:background="?android:attr/listDivider"/>
 
 
-        <LinearLayout
+        <RelativeLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:orientation="horizontal"
         android:layout_marginTop="10dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
 
 
         <ImageView
+            android:id="@+id/veg1"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_weight="1"
+            android:layout_marginTop="50dp"
             app:srcCompat="@drawable/veg" />
 
         <TextView
@@ -69,6 +66,7 @@
             android:textSize="16sp"
             android:layout_marginTop="3dp"
             android:text="Pizza1"
+            android:layout_below="@id/veg1"
             android:textColor="@color/black"/>
 
             <TextView
@@ -76,40 +74,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_below="@id/First1TV"
                 android:layout_marginTop="6dp"
                 android:text="60" />
 
-        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_remove_circle_outline_24"
-            android:layout_marginLeft="200dp"/>
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/elegant1"
+                android:layout_marginTop="60dp"
+                android:layout_alignParentRight="true"
+                app:backGroundColor="@color/purple_200"/>
 
-        <TextView
-            android:id="@+id/editTextQuantity1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="1"
-            android:inputType="number"
-            android:gravity="center"
-            android:layout_marginTop="65dp"
-            android:text="0" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_add_circle_outline_24" />
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
         <View
@@ -117,25 +96,20 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/layout2"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:orientation="horizontal"
             android:layout_marginTop="10dp">
-
-             <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
 
 
             <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/veg" />
+                android:id="@+id/veg2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:layout_marginTop="50dp"
+                app:srcCompat="@drawable/veg" />
 
             <TextView
                 android:id="@+id/First2TV"
@@ -144,7 +118,7 @@
                 android:textSize="16sp"
                 android:layout_marginTop="3dp"
                 android:textColor="@color/black"
-                android:layout_gravity="center"
+                android:layout_below="@id/veg2"
                 android:text="Pizza2" />
 
                  <TextView
@@ -153,40 +127,19 @@
                      android:layout_height="wrap_content"
                      android:layout_weight="1"
                      android:layout_marginTop="6dp"
+                     android:layout_below="@id/First2TV"
                      android:text="120" />
 
-
-             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:id="@+id/elegant2"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_remove_circle_outline_24"
-                android:layout_marginLeft="200dp"/>
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="60dp"
+                app:backGroundColor="@color/purple_200"/>
 
-            <TextView
-                android:id="@+id/editTextQuantity2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="1"
-                android:layout_marginTop="65dp"
-                android:inputType="number"
-                android:gravity="center"
-                android:text="0" />
+             </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_add_circle_outline_24" />
-
-        </LinearLayout>
 
 
         <View
@@ -209,24 +162,19 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/layout3"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:orientation="horizontal"
         android:layout_marginTop="10dp">
-
-             <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
 
 
             <ImageView
-            android:layout_width="20dp"
+                android:id="@+id/veg3"
+                android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_weight="1"
+                android:layout_marginTop="50dp"
             app:srcCompat="@drawable/veg" />
 
 
@@ -235,6 +183,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
+            android:layout_below="@id/veg3"
             android:layout_marginTop="3dp"
             android:textColor="@color/black"
             android:layout_gravity="center"
@@ -245,41 +194,20 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:layout_weight="1"
+                     android:layout_below="@id/Second1TV"
                      android:layout_marginTop="6dp"
                      android:text="70" />
 
 
-             </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/elegant3"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_remove_circle_outline_24"
-            android:layout_marginLeft="200dp"/>
+            android:layout_marginTop="60dp"
+            android:layout_alignParentRight="true"
+            app:backGroundColor="@color/purple_200"/>
 
-        <TextView
-            android:id="@+id/editTextSecondQuantity1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="1"
-            android:layout_marginTop="65dp"
-            android:inputType="number"
-            android:gravity="center"
-            android:text="0" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_add_circle_outline_24" />
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
         <View
@@ -287,24 +215,20 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider"/>
 
-    <LinearLayout
+
+        <RelativeLayout
         android:id="@+id/layout4"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:orientation="horizontal"
         android:layout_marginTop="10dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
 
 
             <ImageView
+               android:id="@+id/veg4"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
+                android:layout_marginTop="50dp"
                 app:srcCompat="@drawable/veg" />
 
             <TextView
@@ -312,8 +236,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
+               android:layout_below="@id/veg4"
                 android:textColor="@color/black"
-                android:layout_gravity="center"
                 android:text="Donut2" />
 
             <TextView
@@ -321,42 +245,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_below="@id/Second2TV"
                 android:layout_marginTop="6dp"
                 android:text="90" />
 
-
-        </LinearLayout>
-
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_remove_circle_outline_24"
-            android:layout_marginLeft="200dp"/>
+            android:id="@+id/elegant4"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="60dp"
+            app:backGroundColor="@color/purple_200"/>
 
-        <TextView
-            android:id="@+id/editTextSecondQuantity2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="1"
-            android:layout_marginTop="65dp"
-            android:inputType="number"
-            android:gravity="center"
-            android:text="0" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_add_circle_outline_24" />
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
         <View
@@ -379,24 +280,19 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/layout5"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:orientation="horizontal"
             android:layout_marginTop="10dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
 
 
                 <ImageView
+                    android:id="@+id/veg5"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_weight="1"
+                    android:layout_marginTop="50dp"
                     app:srcCompat="@drawable/veg" />
 
 
@@ -407,6 +303,7 @@
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:layout_gravity="center"
+                    android:layout_below="@+id/veg5"
                     android:text="Sandwitch1" />
 
 
@@ -416,42 +313,18 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginTop="6dp"
+                    android:layout_below="@id/Third1TV"
                     android:text="100" />
 
-
-            </LinearLayout>
-
-
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="wrap_content"
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_remove_circle_outline_24"
-                android:layout_marginLeft="200dp"/>
+                android:id="@+id/elegant5"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="60dp"
+                app:backGroundColor="@color/purple_200"/>
 
-            <TextView
-                android:id="@+id/editTextThirdQuantity1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="1"
-                android:layout_marginTop="65dp"
-                android:inputType="number"
-                android:gravity="center"
-                android:text="0" />
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_add_circle_outline_24" />
-
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <View
@@ -459,24 +332,19 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/layout6"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:orientation="horizontal"
             android:layout_marginTop="10dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-
-
                 <ImageView
+                    android:id="@+id/veg6"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_weight="1"
+                    android:layout_marginTop="50dp"
                     app:srcCompat="@drawable/veg" />
 
                 <TextView
@@ -486,6 +354,7 @@
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:layout_gravity="center"
+                    android:layout_below="@+id/veg6"
                     android:text="Sandwitch2" />
 
 
@@ -495,40 +364,18 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginTop="6dp"
+                    android:layout_below="@id/Third2TV"
                     android:text="80" />
 
-            </LinearLayout>
-
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="wrap_content"
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_remove_circle_outline_24"
-                android:layout_marginLeft="200dp"/>
+                android:id="@+id/elegant6"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="60dp"
+                app:backGroundColor="@color/purple_200"/>
 
-            <TextView
-                android:id="@+id/editTextThirdQuantity2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="1"
-                android:layout_marginTop="65dp"
-                android:inputType="number"
-                android:gravity="center"
-                android:text="0" />
-
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_add_circle_outline_24" />
-
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <View
@@ -542,15 +389,8 @@
             android:layout_height="wrap_content"
             android:text="Next"
             android:layout_gravity="right"
-            android:layout_marginTop="15dp"/>
-
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:layout_gravity="right"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:background="@color/purple_200"/>
 
     </LinearLayout>
     </ScrollView>
