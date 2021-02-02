@@ -7,17 +7,15 @@
     android:id="@+id/drawerLayout"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/toolbarlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:elevation="2dp">
-
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -26,16 +24,33 @@
             android:layout_height="wrap_content"
             android:background="@color/purple_200"/>
 
+    </LinearLayout>
 
-        <TextView
-        android:id="@+id/FirstTV"
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarlayout">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pizza"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
-        android:textStyle="bold"/>
+        android:orientation="vertical"
+        android:elevation="2dp">
+
+
+        <TextView
+            android:id="@+id/FirstTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"/>
 
         <View
             android:layout_width="match_parent"
@@ -44,10 +59,12 @@
 
 
         <RelativeLayout
-        android:id="@+id/layout1"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="10dp">
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp">
 
 
 
@@ -100,6 +117,8 @@
             android:id="@+id/layout2"
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_marginTop="10dp">
 
 
@@ -154,6 +173,8 @@
         android:text="Donuts"
         android:textColor="@color/black"
         android:textSize="24sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
         android:textStyle="bold"/>
 
@@ -166,6 +187,8 @@
         android:id="@+id/layout3"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_marginTop="10dp">
 
 
@@ -220,6 +243,8 @@
         android:id="@+id/layout4"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
         android:layout_marginTop="10dp">
 
 
@@ -272,6 +297,8 @@
             android:text="Sandwitch"
             android:textColor="@color/black"
             android:textSize="24sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
             android:textStyle="bold"/>
 
@@ -284,6 +311,8 @@
             android:id="@+id/layout5"
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_marginTop="10dp">
 
 
@@ -336,7 +365,8 @@
             android:id="@+id/layout6"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_marginTop="10dp">
 
                 <ImageView
@@ -383,17 +413,48 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider"/>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Next"
-            android:layout_gravity="right"
-            android:layout_marginTop="15dp"
-            android:background="@color/purple_200"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="?android:attr/listDivider"/>
 
-    </LinearLayout>
+<!--        <Button-->
+<!--            android:id="@+id/button"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Next"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:background="@color/purple_200"/>-->
+
+        </LinearLayout>
     </ScrollView>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="70dp"
+           android:layout_alignParentBottom="true"
+           android:background="@color/white"
+           android:elevation="10dp">
+
+           <Button
+               android:id="@+id/button"
+               android:layout_width="300dp"
+               android:layout_height="wrap_content"
+               android:text="next"
+               android:backgroundTint="@color/purple_200"
+               android:layout_centerInParent="true"/>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="?android:attr/listDivider"
+               android:layout_alignParentBottom="true"/>
+
+       </RelativeLayout>
+   </RelativeLayout>
+
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationDrawer"
