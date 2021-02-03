@@ -3,6 +3,7 @@ package com.example.myapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +35,7 @@ public class Invoice extends AppCompatActivity {
     FirebaseFirestore firestore;
     FirebaseAuth auth;
     String userId,quantity="0";
-    Button place;
+    CardView place;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

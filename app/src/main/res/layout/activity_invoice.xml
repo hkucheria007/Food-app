@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Invoice">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
 
                 <RelativeLayout
@@ -396,24 +393,54 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/RL3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/RL2"
-                android:layout_marginTop="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
+
+                <View
+                    android:id="@+id/anchor1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/anchor1"
+            android:backgroundTint="@color/purple_200">
 
 
-                    <Button
-                        android:id="@+id/Order"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Place Order"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"/>
-            </RelativeLayout>
+                <TextView
+                    android:id="@+id/PlaceOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PLACE ORDER"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <!--            <RelativeLayout-->
+<!--                android:id="@+id/RL3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/RL2"-->
+<!--                android:layout_marginTop="30dp">-->
+
+
+<!--                    <Button-->
+<!--                        android:id="@+id/Order"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Place Order"-->
+<!--                        android:layout_alignParentBottom="true"-->
+<!--                        android:layout_alignParentRight="true"/>-->
+<!--            </RelativeLayout>-->
 
 
     </RelativeLayout>
-</ScrollView>
 
