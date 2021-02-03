@@ -2,6 +2,7 @@ package com.example.myapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,7 +27,7 @@ import java.util.Map;
 public class DetailsActivity extends AppCompatActivity {
     TextView head;
     TextInputEditText fn,ln,mno,add1,add2,add3,ct,pin;
-    Button sub;
+    CardView sub;
     FirebaseFirestore firestore;
     FirebaseAuth auth;
     String first,last,number,address1,address2,address3,city,pincode;

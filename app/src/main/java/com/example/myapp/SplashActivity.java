@@ -17,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
     ImageView imageView;
     TextView textView;
 
-    private final int splashLength=5000;
+    private final int splashLength=2000;
 
     FirebaseAuth auth;
     FirebaseUser CurrentUser;
