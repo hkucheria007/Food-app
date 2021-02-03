@@ -61,28 +61,38 @@
         <RelativeLayout
             android:id="@+id/layout1"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginTop="10dp">
 
 
+            <ImageView
+                android:id="@+id/imgPizza1"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/pizza1" />
 
-        <ImageView
-            android:id="@+id/veg1"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/veg" />
+            <ImageView
+                android:id="@+id/veg1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/imgPizza1"
+                app:srcCompat="@drawable/veg" />
 
         <TextView
             android:id="@+id/First1TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"
-            android:text="Pizza1"
+            android:layout_toRightOf="@id/imgPizza1"
+            android:text="Onion Capsicum"
             android:layout_below="@id/veg1"
             android:textColor="@color/black"/>
 
@@ -91,8 +101,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginLeft="10dp"
                 android:layout_below="@id/First1TV"
-                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@id/imgPizza1"
+                android:layout_marginTop="4dp"
                 android:text="60" />
 
 
@@ -100,7 +112,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/elegant1"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="30dp"
                 android:layout_alignParentRight="true"
                 app:backGroundColor="@color/purple_200"/>
 
@@ -116,28 +128,39 @@
         <RelativeLayout
             android:id="@+id/layout2"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginTop="10dp">
 
 
             <ImageView
+                android:id="@+id/imgPizza2"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/pizza2" />
+
+            <ImageView
                 android:id="@+id/veg2"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/imgPizza2"
                 app:srcCompat="@drawable/veg" />
 
             <TextView
                 android:id="@+id/First2TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="14dp"
                 android:layout_marginTop="3dp"
                 android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
                 android:layout_below="@id/veg2"
+                android:layout_toRightOf="@id/imgPizza2"
                 android:text="Pizza2" />
 
                  <TextView
@@ -145,7 +168,9 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:layout_weight="1"
-                     android:layout_marginTop="6dp"
+                     android:layout_marginTop="3dp"
+                     android:layout_toRightOf="@id/imgPizza2"
+                     android:layout_marginLeft="10dp"
                      android:layout_below="@id/First2TV"
                      android:text="120" />
 
@@ -154,7 +179,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="30dp"
                 app:backGroundColor="@color/purple_200"/>
 
              </RelativeLayout>
@@ -186,18 +211,27 @@
     <RelativeLayout
         android:id="@+id/layout3"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="120dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:layout_marginTop="10dp">
 
 
-            <ImageView
+        <ImageView
+            android:id="@+id/imgDonut1"
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/donut1" />
+
+        <ImageView
                 android:id="@+id/veg3"
                 android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_weight="1"
-                android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/imgDonut1"
+            android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
             app:srcCompat="@drawable/veg" />
 
 
@@ -205,7 +239,9 @@
             android:id="@+id/Second1TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="14dp"
+            android:layout_toRightOf="@id/imgDonut1"
+            android:layout_marginLeft="10dp"
             android:layout_below="@id/veg3"
             android:layout_marginTop="3dp"
             android:textColor="@color/black"
@@ -217,8 +253,10 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:layout_weight="1"
+                     android:layout_marginLeft="10dp"
                      android:layout_below="@id/Second1TV"
-                     android:layout_marginTop="6dp"
+                     android:layout_marginTop="3dp"
+                     android:layout_toRightOf="@id/imgDonut1"
                      android:text="70" />
 
 
@@ -226,7 +264,7 @@
             android:id="@+id/elegant3"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:layout_alignParentRight="true"
             app:backGroundColor="@color/purple_200"/>
 
@@ -242,25 +280,36 @@
         <RelativeLayout
         android:id="@+id/layout4"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="120dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
         android:layout_marginTop="10dp">
 
 
             <ImageView
+                android:id="@+id/imgDonut2"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/donut2" />
+
+            <ImageView
                android:id="@+id/veg4"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/imgDonut2"
+                android:layout_marginLeft="10dp"
                 app:srcCompat="@drawable/veg" />
 
             <TextView
                 android:id="@+id/Second2TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="14dp"
+                android:layout_toRightOf="@id/imgDonut2"
+                android:layout_marginLeft="10dp"
                android:layout_below="@id/veg4"
                 android:textColor="@color/black"
                 android:text="Donut2" />
@@ -270,8 +319,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_toRightOf="@id/imgDonut2"
+                android:layout_marginLeft="10dp"
                 android:layout_below="@id/Second2TV"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="3dp"
                 android:text="90" />
 
         <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
@@ -279,7 +330,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/elegant4"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             app:backGroundColor="@color/purple_200"/>
 
     </RelativeLayout>
@@ -310,18 +361,27 @@
         <RelativeLayout
             android:id="@+id/layout5"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginTop="10dp">
 
 
-                <ImageView
+            <ImageView
+                android:id="@+id/imgSandwich1"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/sandwich1" />
+
+            <ImageView
                     android:id="@+id/veg5"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_weight="1"
-                    android:layout_marginTop="50dp"
+                android:layout_toRightOf="@id/imgSandwich1"
+                android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
                     app:srcCompat="@drawable/veg" />
 
 
@@ -329,7 +389,9 @@
                     android:id="@+id/Third1TV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="14dp"
+                    android:layout_toRightOf="@id/imgSandwich1"
+                    android:layout_marginLeft="10dp"
                     android:textColor="@color/black"
                     android:layout_gravity="center"
                     android:layout_below="@+id/veg5"
@@ -341,7 +403,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/imgSandwich1"
+                    android:layout_marginLeft="10dp"
                     android:layout_below="@id/Third1TV"
                     android:text="100" />
 
@@ -350,7 +414,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/elegant5"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="30dp"
                 app:backGroundColor="@color/purple_200"/>
 
         </RelativeLayout>
@@ -364,24 +428,35 @@
         <RelativeLayout
             android:id="@+id/layout6"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginTop="10dp">
 
-                <ImageView
+            <ImageView
+                android:id="@+id/imgSandwich2"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/sandwich2" />
+
+            <ImageView
                     android:id="@+id/veg6"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_weight="1"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/imgSandwich2"
+                android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/veg" />
 
                 <TextView
                     android:id="@+id/Third2TV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="14dp"
+                    android:layout_toRightOf="@id/imgSandwich2"
+                    android:layout_marginLeft="10dp"
                     android:textColor="@color/black"
                     android:layout_gravity="center"
                     android:layout_below="@+id/veg6"
@@ -393,7 +468,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/imgSandwich2"
+                    android:layout_marginLeft="10dp"
                     android:layout_below="@id/Third2TV"
                     android:text="80" />
 
@@ -402,7 +479,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/elegant6"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="30dp"
                 app:backGroundColor="@color/purple_200"/>
 
         </RelativeLayout>
