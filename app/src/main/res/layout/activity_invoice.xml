@@ -6,15 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".Invoice">
 
+    <RelativeLayout
+        android:id="@+id/invoiceToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="@drawable/ic_details_back"
+        app:title="ORDER DETAILS"
+        app:titleMarginStart="70dp"
+        app:titleTextColor="@color/white">
 
-                <RelativeLayout
+<!--    <TextView-->
+<!--        android:id="@+id/InvoiceHeading"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Order Details"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="18dp"-->
+<!--        android:textStyle="bold"/>-->
+
+</androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+
+    <RelativeLayout
                     android:id="@+id/RL1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp">
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@id/invoiceToolbar">
 
 
                 <ImageView
@@ -298,7 +328,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/RL1"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="150dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp">
 
@@ -395,51 +425,28 @@
 
 
         <RelativeLayout
+            android:id="@+id/RL3"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true">
+            android:layout_height="70dp"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:elevation="10dp">
 
-                <View
-                    android:id="@+id/anchor1"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_centerInParent="true"/>
+            <Button
+                android:id="@+id/Order"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="PLACE ORDER"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/purple_200"/>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/Order"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@id/anchor1"
-            android:backgroundTint="@color/purple_200">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:layout_alignParentBottom="true"/>
 
-
-                <TextView
-                    android:id="@+id/PlaceOrder"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PLACE ORDER"
-                    android:textSize="15dp"
-                    android:textColor="@color/white"
-                    android:layout_gravity="center" />
-        </androidx.cardview.widget.CardView>
         </RelativeLayout>
-
-        <!--            <RelativeLayout-->
-<!--                android:id="@+id/RL3"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/RL2"-->
-<!--                android:layout_marginTop="30dp">-->
-
-
-<!--                    <Button-->
-<!--                        android:id="@+id/Order"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="Place Order"-->
-<!--                        android:layout_alignParentBottom="true"-->
-<!--                        android:layout_alignParentRight="true"/>-->
-<!--            </RelativeLayout>-->
 
 
     </RelativeLayout>

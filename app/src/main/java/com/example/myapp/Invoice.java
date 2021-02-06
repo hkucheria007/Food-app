@@ -3,6 +3,7 @@ package com.example.myapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
@@ -35,12 +36,23 @@ public class Invoice extends AppCompatActivity {
     FirebaseFirestore firestore;
     FirebaseAuth auth;
     String userId,quantity="0";
-    CardView place;
+    Button place;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invoice);
+
+        toolbar=findViewById(R.id.toolbar3);
+        setSupportActionBar(toolbar);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         auth=FirebaseAuth.getInstance();
         firestore=FirebaseFirestore.getInstance();
@@ -211,23 +223,8 @@ public class Invoice extends AppCompatActivity {
             san2.setVisibility(View.GONE);
             pris2.setVisibility(View.GONE);
         }
-//                //Quantity TextView SetText
-//                qpiz1.setText(qp1);
-//                qpiz2.setText(qp2);
-//                qdo1.setText(qd1);
-//                qdo2.setText(qd2);
-//                qsan1.setText(qs1);
-//                qsan2.setText(qs2);
-//
-//                //Price TextView SetText
-//                prip1.setText(pp1);
-//                prip2.setText(pp2);
-//                prid1.setText(pd1);
-//                prid2.setText(pd2);
-//                pris1.setText(ps1);
-//                pris2.setText(ps2);
 
-
+                //place order button
                 place.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

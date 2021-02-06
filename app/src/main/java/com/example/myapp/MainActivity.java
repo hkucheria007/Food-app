@@ -280,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
                     i.putExtra("PriceS2", ps2);
                     i.putExtra("GrandTotal", grandtotal);
                     startActivity(i);
-                    finish();
+//                    finish();
                 } else {
                     Toast.makeText(MainActivity.this, "Please Add Some food items", Toast.LENGTH_SHORT).show();
                 }

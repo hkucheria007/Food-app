@@ -11,8 +11,100 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Contact Us"
-        android:textColor="@color/black"
+        android:text="CONTACT US"
+        android:textColor="@color/purple_700"
         android:textStyle="bold"
         android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/SupportHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FOR SUPPORT AND HELP:-"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@id/ContactHeading"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@drawable/ic_baseline_settings_24"/>
+
+    <TextView
+        android:id="@+id/SupportMobileNoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile No:"
+        android:layout_below="@id/SupportHeading"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+        android:drawableLeft="@drawable/ic_contact_mobile"/>
+
+    <TextView
+        android:id="@+id/SupportMobileNoNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8788681243"
+        android:inputType="number"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+        android:layout_below="@id/SupportHeading"
+        android:layout_toRightOf="@id/SupportMobileNoName" />
+
+    <TextView
+        android:id="@+id/SupportLandlineNoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Landline:"
+        android:layout_below="@id/SupportMobileNoName"
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_contact_landline"/>
+
+    <TextView
+        android:id="@+id/SupportLandlineNoNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0257-2261617"
+        android:inputType="number"
+        android:layout_below="@id/SupportMobileNoName"
+        android:layout_toRightOf="@id/SupportLandlineNoName"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/SupportEmailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:layout_below="@id/SupportLandlineNoName"
+        android:textSize="18dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_contact_email"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/SupportEmailString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kucheriahrithik@gmail.com"
+        android:layout_below="@id/SupportLandlineNoName"
+        android:layout_toRightOf="@id/SupportEmailName"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"/>
+
+
 </RelativeLayout>

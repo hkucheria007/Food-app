@@ -1,44 +1,45 @@
 package com.example.myapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import org.w3c.dom.Text;
-
-import java.util.HashMap;
-import java.util.Map;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 public class DetailsActivity extends AppCompatActivity {
-    TextView head;
+
     TextInputEditText fn,ln,mno,add1,add2,add3,ct,pin;
-    CardView sub;
+    Button sub;
     FirebaseFirestore firestore;
     FirebaseAuth auth;
     String first,last,number,address1,address2,address3,city,pincode;
     String userId;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        head=findViewById(R.id.headline);
+        toolbar=findViewById(R.id.toolbar2);
+        setSupportActionBar(toolbar);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         fn=findViewById(R.id.fname);
         ln=findViewById(R.id.lname);
         mno=findViewById(R.id.MNumber);
@@ -101,7 +102,7 @@ public class DetailsActivity extends AppCompatActivity {
                         in.putExtras(bundle);
                     }
                     startActivity(in);
-                    finish();
+//                    finish();
                 }
             }
         });
@@ -112,6 +113,6 @@ public class DetailsActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         startActivity(new Intent(DetailsActivity.this,MainActivity.class));
-        finish();
+//        finish();
     }
 }

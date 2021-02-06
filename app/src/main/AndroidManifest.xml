@@ -13,11 +13,14 @@
         tools:replace="android:label,android:icon,android:theme">
         <activity android:name=".Contact"></activity>
         <activity android:name=".AboutUs" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"
+                    android:launchMode="singleTop"/>
         <activity android:name=".Invoice" />
-        <activity android:name=".DetailsActivity" />
+        <activity android:name=".DetailsActivity"
+                    android:launchMode="singleTop"/>
         <activity android:name=".VerifyMobile" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+                    android:launchMode="singleTop"/>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

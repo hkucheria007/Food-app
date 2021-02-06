@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-
-    <item android:title="Hrithik" >
-
-<menu android:checkableBehavior="single">
+<group android:checkableBehavior="single">
 
     <item
         android:id="@+id/idYourOrder"
@@ -23,7 +20,7 @@
     <item
         android:id="@+id/idContact"
         android:icon="@drawable/ic_contact"
-        android:title="Contact" />
+        android:title="Contact"/>
 
     <item
         android:id="@+id/idShareApp"
@@ -35,11 +32,19 @@
         android:icon="@drawable/ic_rate"
         android:title="Rate App" />
 
+
+
     <item
         android:id="@+id/idLogout"
         android:icon="@drawable/ic_logout"
         android:title="Logout" />
 
-</menu>
-    </item>
+<!--    <item-->
+<!--        android:id="AllCategories"-->
+<!--        android:icon="@drawable/ic_rate"-->
+<!--        android:title="All categories">-->
+
+<!--    </item>-->
+
+</group>
 </menu>
