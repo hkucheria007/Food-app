@@ -240,6 +240,7 @@ public class Invoice extends AppCompatActivity {
                         user.put("Donut2",qd2);
                         user.put("Sandwitch1",qs1);
                         user.put("Sandwitch2",qs2);
+                        user.put("Total",totalPay);
 
                         dr.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

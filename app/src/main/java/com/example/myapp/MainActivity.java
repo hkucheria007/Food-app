@@ -22,9 +22,12 @@ import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     Button next;
     FirebaseAuth auth;
     FirebaseFirestore firestore;
+    String userId;
     String pizza1, pizza2, donut1, donut2, sandwitch1, sandwitch2;
     String Quantityp1, Quantityp2, Quantityd1, Quantityd2, Quantitys1, Quantitys2;
     String p1, p2, p3, p4, p5, p6;
@@ -93,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.idYourOrder:
-//                        startActivity(new Intent(MainActivity.this, Invoice.class));
-//                        finish();
+                        startActivity(new Intent(MainActivity.this,YourOrder.class));
+                        finish();
                         break;
 
                     case R.id.idAboutUs:
@@ -229,6 +233,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                userId=auth.getCurrentUser().getUid();
+                DocumentReference dr=firestore.collection("Products").document(userId);
+
+                dr.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()){
+                            DocumentSnapshot document=task.getResult();
+                            if (document.exists()){
+                                Toast.makeText(MainActivity.this, "Current Order is in Process,Wait Until it's Delivered", Toast.LENGTH_SHORT).show();
+                            }else{
+
+
                 //name
                 pizza1 = t2.getText().toString();
                 pizza2 = t3.getText().toString();
@@ -284,10 +301,17 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(MainActivity.this, "Please Add Some food items", Toast.LENGTH_SHORT).show();
                 }
+
+                            }
+                        }
+                    }
+                });
+
             }
         });
-
     }
+
+
 
     @Override
     public void onBackPressed() {
