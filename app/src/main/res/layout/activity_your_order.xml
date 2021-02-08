@@ -7,21 +7,50 @@
     tools:context=".YourOrder">
 
 
+    <TextView
+        android:id="@+id/headingYourOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Order"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/NoCurrentOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No Current Orders!"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardviewYourOrder"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/headingYourOrder"
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
         <TextView
             android:id="@+id/HotelName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hrithik"
-            android:textSize="20dp"
+            android:text="Food Delivery"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
@@ -31,15 +60,15 @@
             android:layout_height="wrap_content"
             android:text="Adarsh Nagar,Jalgaon"
             android:layout_below="@id/HotelName"
-            android:textSize="16dp"/>
+            android:textSize="14dp"/>
 
             <TextView
                 android:id="@+id/PriceHotel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
                 android:layout_alignParentRight="true"
-                android:textSize="20dp"
+                android:textSize="18dp"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
 
@@ -58,7 +87,7 @@
                 android:text="ITEMS"
                 android:layout_below="@+id/view1"
                 android:layout_marginTop="10dp"
-                android:textSize="18dp"/>
+                android:textSize="14dp"/>
 
             <TextView
                 android:id="@+id/itemsDetails"
@@ -66,8 +95,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/itemsHeading"
                 android:layout_marginTop="5dp"
-                android:textSize="18dp"
+                android:textSize="14dp"
                 android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                android:layout_below="@id/itemsDetails"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
