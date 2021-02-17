@@ -3,7 +3,9 @@ package com.example.myapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,7 +25,9 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class YourOrder extends AppCompatActivity {
 
+    SwipeRefreshLayout swipeRefreshLayout;
     CardView cardView;
+    Toolbar toolbar;
     TextView namehotel,locationhotel,pricehotel,itemhead,itemdetails;
     TextView nocurrentorder,activityheading;
     FirebaseAuth auth;
@@ -40,6 +44,18 @@ public class YourOrder extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         firestore=FirebaseFirestore.getInstance();
 
+        swipeRefreshLayout=findViewById(R.id.refreshlayout);
+
+        //toolbar
+        toolbar=findViewById(R.id.YourOrderToolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               onBackPressed();
+            }
+        });
+
         cardView=findViewById(R.id.cardviewYourOrder);
         namehotel=findViewById(R.id.HotelName);
         locationhotel=findViewById(R.id.AddressHotel);
@@ -47,7 +63,20 @@ public class YourOrder extends AppCompatActivity {
         itemhead=findViewById(R.id.itemsHeading);
         itemdetails=findViewById(R.id.itemsDetails);
         nocurrentorder=findViewById(R.id.NoCurrentOrder);
-        activityheading=findViewById(R.id.headingYourOrder);
+//        activityheading=findViewById(R.id.headingYourOrder);
+
+        //On refresh
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Intent i=new Intent(YourOrder.this,YourOrder.class);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(i);
+                overridePendingTransition(0,0);
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
 
         //data retrieve
         userId=auth.getCurrentUser().getUid();

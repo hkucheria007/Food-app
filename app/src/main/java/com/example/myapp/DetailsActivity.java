@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,13 +23,29 @@ public class DetailsActivity extends AppCompatActivity {
     FirebaseFirestore firestore;
     FirebaseAuth auth;
     String first,last,number,address1,address2,address3,city,pincode;
-    String userId;
+    RelativeLayout relativeLayout;
     Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
+        relativeLayout=findViewById(R.id.SVRelative);
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fn.clearFocus();
+                ln.clearFocus();
+                mno.clearFocus();
+                add1.clearFocus();
+                add2.clearFocus();
+                add3.clearFocus();
+                ct.clearFocus();
+                pin.clearFocus();
+            }
+        });
+
 
         toolbar=findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
@@ -72,21 +89,30 @@ public class DetailsActivity extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(first)){
                     fn.setError("Can't leave Firstname Empty");
+                    fn.requestFocus();
                 }else if(TextUtils.isEmpty(last)){
                     ln.setError("Can't leave Lastname Empty");
+                    ln.requestFocus();
                 }else if(number.length()<10 || number.length()>10){
                     mno.setError("Enter Valid Number");
+                    mno.requestFocus();
                 }else if (TextUtils.isEmpty(address1)){
                     add1.setError("Can't leave Address1 Empty");
+                    add1.requestFocus();
                 }else if (TextUtils.isEmpty(address2)){
                     add2.setError("Can't leave Address2 Empty");
+                    add2.requestFocus();
                 }else if (TextUtils.isEmpty(address3)){
                     add3.setError("Can't leave Address3 Empty");
+                    add3.requestFocus();
                 }else if (TextUtils.isEmpty(city)){
                     ct.setError("Can't leave City Empty");
+                    ct.requestFocus();
                 }else if (TextUtils.isEmpty(pincode)){
                     pin.setError("Can't leave Pincode Empty");
+                    pin.requestFocus();
                 }else {
+
 
                     Intent in = new Intent(DetailsActivity.this, Invoice.class);
                     in.putExtra("First", first);

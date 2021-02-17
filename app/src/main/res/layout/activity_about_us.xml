@@ -6,15 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".AboutUs">
 
-    <TextView
-        android:id="@+id/AboutHeading"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/AboutUsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="About Us"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="30dp"/>
-
+        android:background="@color/purple_200"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="@drawable/ic_details_back"
+        app:title="ABOUT US"
+        app:titleTextColor="@color/white"
+        app:titleMarginStart="100dp"/>
 
 </RelativeLayout>

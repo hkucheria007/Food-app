@@ -19,9 +19,13 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="HFD"
+            app:titleMarginStart="120dp"
+            app:titleTextColor="@color/white"
             android:background="@color/purple_200"/>
 
     </LinearLayout>

@@ -6,15 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".Contact">
 
-    <TextView
-        android:id="@+id/ContactHeading"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ContactUsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="CONTACT US"
-        android:textColor="@color/purple_700"
-        android:textStyle="bold"
-        android:textSize="30dp"/>
+        android:background="@color/purple_200"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="@drawable/ic_details_back"
+        app:title="CONTACT US"
+        app:titleTextColor="@color/white"
+        app:titleMarginStart="80dp"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/ContactHeading"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:text="CONTACT US"-->
+<!--        android:textColor="@color/purple_700"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="30dp"/>-->
 
     <TextView
         android:id="@+id/SupportHeading"
@@ -24,7 +36,7 @@
         android:textColor="@color/purple_500"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:layout_below="@id/ContactHeading"
+        android:layout_below="@id/ContactUsToolbar"
         android:layout_marginTop="40dp"
         android:drawableLeft="@drawable/ic_baseline_settings_24"/>
 

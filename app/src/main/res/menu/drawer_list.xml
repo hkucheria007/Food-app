@@ -39,12 +39,6 @@
         android:icon="@drawable/ic_logout"
         android:title="Logout" />
 
-<!--    <item-->
-<!--        android:id="AllCategories"-->
-<!--        android:icon="@drawable/ic_rate"-->
-<!--        android:title="All categories">-->
-
-<!--    </item>-->
 
 </group>
 </menu>
